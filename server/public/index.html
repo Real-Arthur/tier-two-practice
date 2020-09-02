@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is a node app</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="server/public/vendors/jquery.js"></script>
-    <script src="server/public/scripts/client.js"></script>
+    <script src="./vendors/jquery.js"></script>
+    <script src="./scripts/client.js"></script>
 </head>
 <body>
-    <h1>This is totally a node app</h1>
+    <h1>Activities for homeschool</h1>
+
+    <!-- Activities template
+        {
+        activity: "Typing practices",
+        isScreenTime: true,
+        type: "Mind Exercises"
+    }, -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Activity</th>
+                <th>Screen Time?</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Typing Practice</td>
+                <td>true</td>
+                <td>Mind Exercises</td>
+            </tr>
+            <tr>
+                <td>Typing Practice</td>
+                <td>true</td>
+                <td>Mind Exercises</td>
+            </tr>
+            <tr>
+                <td>Typing Practice</td>
+                <td>true</td>
+                <td>Mind Exercises</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
