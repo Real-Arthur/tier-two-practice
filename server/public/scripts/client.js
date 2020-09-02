@@ -8,13 +8,13 @@ $(document).ready(onReady);
 //     isScreenTime: true,
 //     type: "Mind Exercises"
 // },
-
-// let activities = ???;
-
+function onReady(){
+    console.log(`I'm ready`)
 // AJAX!!!!!
 // ----------------
 $.ajax({
-    url: 'http://localhost:3000/activities'
+    url: 'http://localhost:3000/activities',
+    method: 'GET'
 })
     .then(function(activities) {
     console.log("We got a response!", activities)
@@ -26,10 +26,12 @@ $.ajax({
                 <td>${activity.isScreenTime}</td>
                 <td>${activity.type}</td>
             </tr>
-        `)
-    }
-});
+        `);
+    } // end for
+})
+.catch(function(errorInfo) {
+    console.log('something is bad', errorInfo);
+    alert('All is bad');
+}); // end of AJAX.then()
 
-function onReady() {
-    console.log(`I'm ready`)
-}
+} // end onReady
