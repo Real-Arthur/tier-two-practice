@@ -34,4 +34,30 @@ $.ajax({
     alert('All is bad');
 }); // end of AJAX.then()
 
+
+// Handle new activity form
+$(document).on('click', '#submitBtn', onSubmit);
+
+
 } // end onReady
+
+function onSubmit() {
+    let newActivity = {
+    activity: $('#activityInput').val(),
+    type: $('#typeInput').val(),
+    isScreenTime: $('#isScreenTimeInput').is(':checked')
+    };
+    console.log('new activity object', newActivity);
+
+    //  POST /activities
+    // with our newActivity object
+    $.ajax({
+        url: '/activities',
+        method: 'POST',
+        data: newActivity
+    }).then(function(response) {
+        console.log('Created an activity', response);
+    }).catch(function(errorInfo) {
+        console.log('Superbad', errorInfo);
+    })
+}
