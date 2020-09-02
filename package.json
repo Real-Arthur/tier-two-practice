@@ -1,0 +1,23 @@
+{
+  "name": "tier-two-practice",
+  "version": "1.0.0",
+  "description": "Practicing this ajax and node stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Real-Arthur/tier-two-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Real-Arthur/tier-two-practice/issues"
+  },
+  "homepage": "https://github.com/Real-Arthur/tier-two-practice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
