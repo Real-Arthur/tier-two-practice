@@ -44,13 +44,14 @@ app.get('/activities', function(req, res) {
 // Post /activities
 // and add it to our activities array
 app.post('/activities', function(req, res) {
-    let newActivity = null;
+    console.log('I got a request', req.body);
+    let newActivity = req.body;
 
     // Add the new activity to our list of activities
     activities.push(newActivity);
     res.send(newActivity);
 
-})
+});
 
 
 // Listen for requests
